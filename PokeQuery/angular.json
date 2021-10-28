@@ -31,7 +31,11 @@
             ],
             "styles": [
               "src/styles.css",
+<<<<<<< HEAD
               "node_modules/bootstrap/dist/css/bootstrap.css"
+=======
+              "/npnode_modules/bootstrap/dist/css/bootstrap.css"
+>>>>>>> 7688f83cd5632b9116d3f5fa66c3aa66c0e5a773
             ],
             "scripts": []
           },

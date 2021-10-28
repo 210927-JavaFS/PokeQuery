@@ -4,6 +4,7 @@
 <!-- flying, dragon, ghost, steel, normal, ground, grass, rock, dark
     ice, electric, psychic, fighting, poison, bug, water, fire, fairy
 -->
+<div class="container">
 <label for="type">Types: </label>
 <select id="type" class="form-select">
     <option>
@@ -62,13 +63,4 @@
 <label class="col-sm-4" for="typeInput">Pokemon type</label>
 <input class="col-sm-4" id="typeInput" name="typeInput" type="string" [(ngModel)]="input">
 <button class="btn btn-primary col-sm-4" (click)="getPokemon()">Catch a Pokemons!</button>
-
-
-
-<!-- 
-<div class="row"></div>
-        <label class="col-sm-4" for="typeInput">Pokemon type</label>
-        <input class="col-sm-4" id="typeInput" name="typeInput" type="string" [(ngModel)]="input">
-        <button class="btn btn-primary col-sm-4" (click)="getPokeList()">Catch a Pokemons!</button>
-    </div> -->
 
