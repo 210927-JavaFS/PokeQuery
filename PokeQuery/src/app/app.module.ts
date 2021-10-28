@@ -17,13 +17,9 @@ import { PokeSearchTypeComponent } from './components/poke-search-type/poke-sear
   imports: [
     BrowserModule,
     AppRoutingModule,
-<<<<<<< HEAD
     NgbModule,
     HttpClientModule,
     FormsModule
-=======
-    NgbModule
->>>>>>> 7688f83cd5632b9116d3f5fa66c3aa66c0e5a773
   ],
   providers: [],
   bootstrap: [AppComponent]
