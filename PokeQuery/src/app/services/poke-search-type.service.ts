@@ -2,6 +2,14 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Pokemon } from '../models/pokemon';
 import { Observable } from 'rxjs';
+import { Component, OnInit } from '@angular/core';
+// import { PokeService } from 'src/app/services/poke-search-type.service';
+
+// @Component({
+//   selector: 'app-poke-search-type',
+//   templateUrl: './poke-search-type.component.html',
+//   styleUrls: ['./poke-search-type.component.css']
+// })
 
 
 @Injectable({
