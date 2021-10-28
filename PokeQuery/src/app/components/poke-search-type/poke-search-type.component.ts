@@ -10,7 +10,7 @@ import { PokeSearchTypeService } from 'src/app/services/poke-search-type.service
 export class PokeSearchTypeComponent implements OnInit {
 
   public pokemon:Pokemon|null = null;
-  public input:string = "";
+  public input:string = '';
   public pokemonList:Pokemon[] =  [];
 
 
@@ -25,6 +25,7 @@ export class PokeSearchTypeComponent implements OnInit {
 
       (data: any)=>{
         this.pokemonList=data;
+        console.log(this.pokemonList);
       },
       (error)=>{
         this.pokemon=null;
