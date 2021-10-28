@@ -11,7 +11,7 @@ export class PokeSearchTypeComponent implements OnInit {
 
   public pokemon:Pokemon|null = null;
   public input:string = '';
-  public pokemonList:Pokemon[] =  [];
+  public pokemonList:any =  [];
 
 
   constructor(private pokeService:PokeSearchTypeService) { }
@@ -25,7 +25,7 @@ export class PokeSearchTypeComponent implements OnInit {
 
       (data: any)=>{
         this.pokemonList=data;
-        console.log(this.pokemonList);
+        console.log(this.pokemonList.pokemon[0].pokemon.name);
       },
       (error)=>{
         this.pokemon=null;
