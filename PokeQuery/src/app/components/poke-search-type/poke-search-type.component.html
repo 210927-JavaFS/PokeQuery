@@ -43,11 +43,32 @@
         <p>poison</p>
     </option>
     <option>
-        <p>bug</p>
+        <p>ghost</p>
+    </option>
+    <option>
+        <p>psychic</p>
+    </option>
+    <option>
+        <p>water</p>
+    </option>
+    <option>
+        <p>fire</p>
+    </option>
+    <option>
+        <p>fairy</p>
     </option>
 </select>
 
+<label class="col-sm-4" for="typeInput">Pokemon type</label>
+<input class="col-sm-4" id="typeInput" name="typeInput" type="string" [(ngModel)]="input">
+<button class="btn btn-primary col-sm-4" (click)="getPokemon()">Catch a Pokemons!</button>
 
-<button></button>
 
+
+<!-- 
+<div class="row"></div>
+        <label class="col-sm-4" for="typeInput">Pokemon type</label>
+        <input class="col-sm-4" id="typeInput" name="typeInput" type="string" [(ngModel)]="input">
+        <button class="btn btn-primary col-sm-4" (click)="getPokeList()">Catch a Pokemons!</button>
+    </div> -->
 
