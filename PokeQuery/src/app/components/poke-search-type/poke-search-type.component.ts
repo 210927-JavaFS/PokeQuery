@@ -25,6 +25,7 @@ export class PokeSearchTypeComponent implements OnInit {
 
       (data: any)=>{
         this.pokemonList=data;
+        console.log(this.pokemonList);
       },
       (error)=>{
         this.pokemon=null;
