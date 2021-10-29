@@ -1,6 +1,6 @@
 export class Pokemon {
 
-    constructor(public name:string, public types: any[], public sprites:any, public move: any[]){}
+    constructor(public name:string, public sprites:any){}
 
 
 

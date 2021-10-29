@@ -62,15 +62,20 @@
 <button class="btn btn-primary col-sm-4" (click)="getPokemon()">Catch a Pokemons!</button>
 
 
-<table class="table" *ngFor="let pokemon of pokemonList.pokemon" >
+<table class="table"  >
     <thead>
         <tr>
             <th scope="col">Name</th>
+            <th scope="col">Sprittes</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody *ngFor="let pokemon of pokemonList">
         <tr>
-            <td>{{pokemon.pokemon.name}}</td>
+            <td>{{pokemon.name}}</td>
+            <td>
+                <img [src]="pokemon.sprites.sprites.front_default">
+            </td>
+            
         </tr>
     </tbody>
 

@@ -22,10 +22,15 @@ export class PokeSearchTypeService {
   getPokemonFromApi(type:string):Observable<Pokemon>{
 
     let obj: any;
-
     obj = this.http.get("https://pokeapi.co/api/v2/type/"+type+"/") as Observable<Pokemon>;
-
-
-    return obj; // returns an array of all the pokemon of said type
+    return obj; 
   }
+
+  getPokemonSprites(url:string):Observable<Pokemon>{
+    
+    let obj: any;
+    obj = this.http.get(url) as Observable<Pokemon>;
+    return obj; 
+  }
+
 }

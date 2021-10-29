@@ -11,7 +11,9 @@ export class PokeSearchTypeComponent implements OnInit {
 
   public pokemon:Pokemon|null = null;
   public input:string = '';
-  public pokemonList:any =  [];
+  public pokemonType:any =  [];
+  public pokemonList:Pokemon[] = [];
+
 
 
   constructor(private pokeService:PokeSearchTypeService) { }
@@ -24,9 +26,19 @@ export class PokeSearchTypeComponent implements OnInit {
     this.pokeService.getPokemonFromApi(this.input).subscribe(
 
       (data: any)=>{
-        this.pokemonList=data;
-        console.log(this.pokemonList.pokemon[0].pokemon.name);
+        this.pokemonType=data;
+
+        for (let i = 0; i < this.pokemonType.pokemon.length; i++) {
+          const element = this.pokemonType.pokemon[i];
+          this.pokeService.getPokemonSprites(element.pokemon.url).subscribe(
+            (data:any)=>{
+              this.pokemonList[i] = new Pokemon(element.pokemon.name, data);
+            }
+          )
+        }
+        console.log(this.pokemonType.pokemon[0].pokemon.name);
       },
+
       (error)=>{
         this.pokemon=null;
         console.log("Didn't retrieve Pokemon");
