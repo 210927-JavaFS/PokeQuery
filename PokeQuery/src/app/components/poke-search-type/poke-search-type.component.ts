@@ -9,7 +9,6 @@ import { PokeSearchTypeService } from 'src/app/services/poke-search-type.service
 })
 export class PokeSearchTypeComponent implements OnInit {
 
-  public pokemon:Pokemon|null = null;
   public input:string = '';
   public pokemonType:any =  [];
   public pokemonList:Pokemon[] = [];
@@ -27,7 +26,7 @@ export class PokeSearchTypeComponent implements OnInit {
 
       (data: any)=>{
         this.pokemonType=data;
-
+        console.log(this.pokemonType);
         for (let i = 0; i < this.pokemonType.pokemon.length; i++) {
           const element = this.pokemonType.pokemon[i];
           this.pokeService.getPokemonSprites(element.pokemon.url).subscribe(
@@ -40,7 +39,7 @@ export class PokeSearchTypeComponent implements OnInit {
       },
 
       (error)=>{
-        this.pokemon=null;
+
         console.log("Didn't retrieve Pokemon");
         console.log(error);
       }
